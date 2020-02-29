@@ -1,0 +1,83 @@
+/* pages/category/index.wxss */
+
+.content {
+  position: fixed;
+  top: 100rpx;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listLeft {
+  width: 200rpx;
+  overflow: auto;
+  height: 100%;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+.listLeft .listItem {
+  text-align: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.active {
+  color: red;
+  background: #fff;
+}
+
+.active::before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background-color: red;
+  left: 0;
+  top: 50%;
+  transform: translateY(-12rpx);
+}
+
+.listRight {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.rightTitle {
+  text-align: center;
+  padding: 20rpx;
+}
+
+.rightTitle text {
+  margin: 0 20rpx;
+  color: #000;
+}
+
+.rightItem {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.rightItem navigator {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+  overflow: hidden;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.rightItem navigator image {
+  width: 100%;
+}

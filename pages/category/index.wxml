@@ -1,0 +1,29 @@
+<!--pages/category/index.wxml-->
+<view class="container">
+  <!-- 引入组件搜索框 -->
+  <search/>
+  <!-- 商品内容 -->
+  <view class="content">
+    <view class="listLeft">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="listItem {{current === index?'active':''}}" bindtap="handleClick" data-index="{{index}}">{{item.cat_name}}</view>
+      </block>
+    </view>
+    <view class="listRight">
+      <block wx:for="{{list[current].children}}" wx:key="index">
+        <view class="rightTitle">
+          /
+          <text>{{item.cat_name}}</text> /
+        </view>
+        <view class="rightItem">
+          <block wx:for="{{item.children}}" wx:key="index">
+            <navigator>
+              <image mode="widthFix" src="{{item.cat_icon}}"></image>
+              <view>{{item.cat_name}}</view>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,8 +1,8 @@
-<navigator url="../../pages/productSearch/index">
-<view class="search">
-<view class="search-input">
+<navigator url="">
+<view class="search background">
+<view class="search-input {{align}}">
 <icon type="search"></icon>
-搜索
+{{keywords}}
 </view>
 </view>
 </navigator>

@@ -17,7 +17,7 @@
         </view>
         <view class="rightItem">
           <block wx:for="{{item.children}}" wx:key="index">
-            <navigator>
+            <navigator url="/pages/goods_list/index?keywords={{item.cat_name}}">
               <image mode="widthFix" src="{{item.cat_icon}}"></image>
               <view>{{item.cat_name}}</view>
             </navigator>

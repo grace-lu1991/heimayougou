@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 头部搜索栏 -->
+  <search keywords="{{keywords}}" background="search" align="left" />
+  <!-- tab栏 -->
+  <view class="tabMenu">
+    <view class="leftTab">
+      <block wx:for="{{tabs}}" wx:key='index'>
+        <view>{{item}}
+          <text class="iconfont iconshangxiajiantou" wx:if="{{index === 2}}"></text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 商品列表部分 -->
+  <view class="list">
+    <block wx:for="{{goods}}" wx:key="index">
+      <navigator class="product-list" url="">
+        <image src="{{item.goods_big_logo}}" mode="aspectFill"></image>
+        <view class="pro-right">
+          <view class="pro-title">{{item.goods_name}}</view>
+          <view class="pro-price">
+            <text>¥</text>{{item.goods_price}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 拖到底部 -->
+  <view class="more">
+  <text wx:if="{{isMore}}">加载中</text>
+  <text wx:if="{{!isMore}}">没有更多数据</text>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+/* pages/search/index.wxss */
+
+.search {
+  padding: 20rpx;
+  background: #efefef;
+}
+
+.search-item {
+  display: flex;
+  justify-content: space-between;
+  height: 60rpx;
+  position: relative;
+}
+
+.recommend {
+  position: absolute;
+  left: 0;
+  top: 79rpx;
+  background: #fff;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 1px #fff solid;
+}
+
+.recommend  navigator {
+  line-height: 2;
+  padding: 10rpx 0;
+  border-bottom: 1px #eee solid;
+  font-size: 14px;
+}
+
+.search-input {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+  align-items: center;
+  font-size: 14px;
+}
+
+.icon {
+  padding-left: 20rpx;
+}
+
+.search-input input {
+  flex: 1;
+}
+
+.button {
+  width: 150rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+
+.history {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.history-item {
+  margin-top:20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 20px;
+}
+
+.history-item navigator {
+  padding: 5px 20px;
+  background: #eee;
+  margin: 0 0 20rpx 20rpx;
+}

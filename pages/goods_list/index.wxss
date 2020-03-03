@@ -70,3 +70,6 @@
 .pro-price text{
   font-size: 12px;
 }
+.title{
+padding: 20rpx;
+}

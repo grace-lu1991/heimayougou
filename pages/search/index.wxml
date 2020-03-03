@@ -1,0 +1,41 @@
+<!--pages/search/index.wxml-->
+<view class="container">
+  <!-- 搜索列表 -->
+  <view class="search">
+    <view class="search-item">
+      <view class="search-input">
+        <icon type="search" class="icon" bindtap="handleClear"></icon>
+        <input placeholder="请输入要你想要的商品" value="{{inputValue}}" bindinput="bindinput" 
+        bindconfirm="handleEnter"
+        bindblur="blurInput"></input>
+      </view>
+      <view class="button" bindtap="cancleClick">
+        取消
+      </view>
+      <!-- 建议搜索列表 -->
+
+      <view class="recommend">
+        <!-- 需要判断recommned长度是否为0 -->
+        <block wx:for="{{recommned}}" wx:key="index" wx:if="{{recommned.length}}">
+          <navigator url="">
+            <icon type="search"></icon>
+            {{item.goods_name}}
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+  </view>
+  <!-- 历史搜索 -->
+  <view class="history">
+    <view class="history-title">历史搜索</view>
+    <icon type="clear" size="20" bindtap="handleClear">
+    </icon>
+  </view>
+  <!-- 历史搜索列表 -->
+  <view class="history-item">
+    <block wx:for="{{history}}" wx:key="index">
+      <navigator >{{item}}</navigator>
+    </block>
+  </view>
+</view>

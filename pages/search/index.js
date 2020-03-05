@@ -91,7 +91,10 @@ Page({
     arr = [...new Set(arr)]
     wx.setStorageSync('history',arr)
     //点击历史记录跳转
- 
+    wx.redirectTo({
+      url: "/pages/goods_list/index?keywords=" + this.data.inputValue
+    })
+   
   },
   //清空历史记录
   handleClear(){

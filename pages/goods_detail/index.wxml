@@ -1,0 +1,59 @@
+<!--pages/goods_detail/index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots>
+      <block wx:for="{{detailInfo.pics}}" wx:key="index">
+        <swiper-item>
+          <image mode="aspectFill" src="{{item.pics_big}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 商品详情 -->
+  <view class="detail">
+    <view class="detail-price">￥{{detailInfo.goods_price}}</view>
+    <view class="detail-title">
+      <view class="pro-title">{{detailInfo.goods_name}}</view>
+      <view class="star">
+        <view class="iconfont icon-shoucang"></view>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view>快递：免运费</view>
+
+    <!-- 商品详情tab栏 -->
+    <view class="tab">
+      <block wx:for="{{['商品详情','商品规格']}}" wx:key="index">
+        <view class="{{current === index?'active':''}}" bindtap="clickTab" data-index="{{index}}">{{item}}</view>
+      </block>
+    </view>
+    <!-- 商品详情 富文本-->
+    <rich-text wx:if="{{current === 0}}" nodes="{{detailInfo.goods_introduce}}">
+    </rich-text>
+    <!-- 商品规格 -->
+    <block wx:for="{{detailInfo.attrs}}" wx:key="index">
+      <view class="product-size">
+        <text>{{item.attr_name}}</text>
+        <text>{{item.attr_vals}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="btn">
+    <view class="contact-btn">
+      <button open-type="contact">打开客服会话窗口</button>
+    </view>
+    <!-- 联系客服 -->
+    <view class="contact">
+      <view class="iconfont icon-kefu"></view>
+      <text>联系客服</text>
+    </view>
+    <!-- 购物车 -->
+    <view class="cart">
+      <view class="iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </view>
+    <view class="cart-btn">加入购物车</view>
+    <view class="cart-btn">立即购买</view>
+  </view>
+</view>

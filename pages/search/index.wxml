@@ -35,7 +35,7 @@
   <!-- 历史搜索列表 -->
   <view class="history-item">
     <block wx:for="{{history}}" wx:key="index">
-      <navigator >{{item}}</navigator>
+      <navigator url="/pages/goods_list/index?keywords={{item}}">{{item}}</navigator>
     </block>
   </view>
 </view>

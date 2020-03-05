@@ -1,0 +1,139 @@
+/* pages/goods_detail/index.wxss */
+
+.container {
+  padding-bottom: 100rpx;
+}
+
+.swiper swiper {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+swiper image {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.detail {
+  padding: 20rpx;
+}
+
+.detail-price {
+  color: red;
+  font-size: 22px;
+  margin-bottom: 20rpx;
+}
+
+.detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.pro-title {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.star {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  width: 120rpx;
+  color: #999;
+  border-left: 1px #999 solid;
+}
+
+.star text {
+  font-size: 13px;
+}
+
+.tab {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ccc;
+}
+
+.tab view {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 35px;
+  overflow: auto;
+}
+
+.active {
+  background: red;
+  color: white;
+}
+
+.product-size {
+  display: flex;
+  justify-content: space-around;
+  line-height: 2;
+}
+
+.product-size text {
+  margin-right: 20rpx;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  box-shadow: 0 -8px 2px #eee;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn > view {
+  height: 100rpx;
+}
+.contact-btn{
+  position: absolute;
+    width: 20%;
+    height: 100%;
+    left:0; 
+    top:0;
+    overflow: hidden;
+    opacity: 0;
+}
+.contact {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-btn {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: orange;
+}
+
+.cart-btn:last-child {
+  background: red;
+}

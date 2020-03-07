@@ -49,11 +49,11 @@
       <text>联系客服</text>
     </view>
     <!-- 购物车 -->
-    <view class="cart">
+    <view class="cart" bindtap="handleToCart">
       <view class="iconfont icon-gouwuche"></view>
       <text>购物车</text>
     </view>
-    <view class="cart-btn">加入购物车</view>
+    <view class="cart-btn" bindtap="clickAddcart">加入购物车</view>
     <view class="cart-btn">立即购买</view>
   </view>
 </view>
